@@ -11,10 +11,37 @@
     />
     <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="https://kit.fontawesome.com/fe697e6552.js" crossorigin="anonymous"></script>
     <title>CCD 2022</title>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+  <body onload="removeLoader()" class="day-mode">
+    <div id="loader" style="transition: 0.8s;"></div>
     <div id="root"></div>
+    <div id="footer"></div>
+    <style>
+      body {
+        position: relative;
+        background-repeat: no-repeat;
+      }
+    
+      #body {
+        position: relative;
+        overflow: hidden;
+      }
+    
+      @media (max-width: 900px) {
+        body {
+          text-align: center;
+          position: relative;
+        }
+      }
+    </style>
+    <script>
+      function removeLoader() {
+        setTimeout(() => {
+          document.getElementById("footer").style.display = "none";
+        }, 1000);
+      }
+    </script>
   </body>
 </html>
