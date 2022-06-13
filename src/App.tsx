@@ -1,4 +1,6 @@
 
+import Navbar from './Components/Navbar/Navbar'
+import Hero from './Components/Hero/Hero'
 import React, { useState, useEffect } from 'react';
 import Speakers from './Components/Speakers/Speakers';
 import Loading from './Components/Loading';
@@ -10,9 +12,10 @@ import Team from './Components/Teams/Teams'
 const Page =() =>{
   return(
     <>
-        <About/>
-       <Speakers />
-      <Team />
+      <Navbar />
+      <Hero />
+      <About />
+      <Speakers />
       </>)}
 
 

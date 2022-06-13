@@ -1,20 +1,20 @@
 module.exports = {
-    content: ['./src/**/*.{js,jsx,ts,tsx}'],
-    theme: {
-        extend: {
-            colors: {
-                white: '#ffffff',
-                lightPurple: '#818DD1',
-                blackOlive: '#3b413c',
-                lightGrey: '#878D89',
-                      lightBlue: "#B5D2E4",
-                white: '#ffffff',
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        white: '#ffffff',
         lightPurple: '#818DD1',
         blackOlive: '#3b413c',
-        lightGrey: "#878D89"
-            },
-        },
-    },
-    plugins: [require('tailwindcss-animation-delay')],
-};
+        lightGrey: '#878D89',
+        lightBlue: '#B5D2E4',
+        googleBlue: '#4285F4',
+        googleGreen: '#34A853',
+        googleYellow: '#FBBC05',
+        googleRed: '#EA4335'
+      }
+    }
+  },
+ plugins: [require('tailwindcss-animation-delay')],
+}
 
