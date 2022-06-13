@@ -1,5 +1,5 @@
 import Title from '../Title/Title'
-import teamData from '../Teams/teamData.json'
+import teamData from './teamData.json'
 import Socials from '../Socials/Socials'
 
 const Teams = () => {
