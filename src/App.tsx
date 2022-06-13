@@ -1,13 +1,16 @@
+
 import React from "react";
 import About from "./About";
+import Team from './Components/Teams/Teams'
+
 
 function App() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Cloud Community Days</h1>
       <About/>
+      <Team />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
