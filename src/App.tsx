@@ -1,15 +1,16 @@
-
-import Speakers from './Components/Speakers/Speakers';
-import React from "react";
-import About from "./About";
+import Navbar from './Components/Navbar/Navbar'
+import Hero from './Components/Hero/Hero'
+import Speakers from './Components/Speakers/Speakers'
+import About from './Components/About/About'
 import Team from './Components/Teams/Teams'
-
 
 function App() {
   return (
     <div>
-      <About/>
-       <Speakers />
+      <Navbar />
+      <Hero />
+      <About />
+      <Speakers />
       <Team />
     </div>
   )

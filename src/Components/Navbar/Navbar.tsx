@@ -1,14 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react'
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
-  const toggleNav = () => setIsOpen(!isOpen);
+  useEffect(() => {
+    window.onscroll = function () {
+      if (window.scrollY > 50) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+  }, [])
+
+  const toggleNav = () => setIsOpen(!isOpen)
 
   return (
     <>
-      <nav className="bg-white shadow-lg">
-        <div className="max-w-6xl mx-auto px-4">
+      <nav
+        className={`${scrolled ? 'shadow-lg backdrop-blur-sm' : ''} fixed w-full`}
+      >
+        <div className="max-w-6xl mx-auto  px-4">
           <div className="flex justify-between">
             <div className="flex space-x-7">
               <div>
@@ -73,7 +86,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className={`${isOpen === false ? "hidden" : ""}`}>
+        <div className={`${isOpen === false ? 'hidden' : ''}`}>
           <ul className="">
             <li className="active">
               <a
@@ -111,5 +124,5 @@ export default function Navbar() {
         </div>
       </nav>
     </>
-  );
+  )
 }
