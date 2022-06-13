@@ -8,8 +8,12 @@ module.exports = {
         blackOlive: '#3b413c',
         lightGrey: '#878D89',
         lightBlue: '#B5D2E4',
-      },
-    },
+        googleBlue: '#4285F4',
+        googleGreen: '#34A853',
+        googleYellow: '#FBBC05',
+        googleRed: '#EA4335'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }

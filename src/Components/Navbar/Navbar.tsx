@@ -35,31 +35,31 @@ export default function Navbar() {
               </div>
             </div>
 
-            <div className="hidden md:flex items-center space-x-3 ">
-              <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden md:flex items-center space-x-3">
+              <div className="hidden md:flex items-center space-x-3">
                 <a
                   href="#!"
-                  className="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold "
+                  className="py-4 px-2 text-googleBlue border-b-4 border-googleBlue font-semibold "
                 >
                   Home
                 </a>
                 <a
                   href="#!"
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                  className="py-4 px-2 text-gray-500 font-semibold hover:text-googleGreen transition duration-300"
                 >
-                  Services
+                  Speakers
                 </a>
                 <a
                   href="#!"
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                  className="py-4 px-2 text-gray-500 font-semibold hover:text-googleYellow transition duration-300"
                 >
-                  About
+                  Timeline
                 </a>
                 <a
                   href="#!"
-                  className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+                  className="py-4 px-2 text-gray-500 font-semibold hover:text-googleRed transition duration-300"
                 >
-                  Contact Us
+                  Sponsors
                 </a>
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function Navbar() {
                 href="#services"
                 className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
               >
-                Services
+                Speakers
               </a>
             </li>
             <li>
@@ -109,7 +109,7 @@ export default function Navbar() {
                 href="#about"
                 className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
               >
-                About
+                Timeline
               </a>
             </li>
             <li>
@@ -117,7 +117,7 @@ export default function Navbar() {
                 href="#contact"
                 className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
               >
-                Contact Us
+                Sponsors
               </a>
             </li>
           </ul>
