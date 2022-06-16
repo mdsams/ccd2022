@@ -1,19 +1,19 @@
 const Footer = () => {
   return (
     <div>
-      <footer class="text-center lg:text-left bg-gray-100 text-gray-600">
-        <div class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
-          <div class="mr-12 hidden lg:block text-2xl ">
+      <footer className="text-center lg:text-left bg-gray-100 text-gray-600">
+        <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
+          <div className="mr-12 hidden lg:block text-2xl ">
             <span>Follow us on:</span>
           </div>
-          <div class="flex justify-center">
-            <a href="#!" class="mr-6 text-gray-600">
+          <div className="flex justify-center">
+            <a href="#!" className="mr-6 text-gray-600">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fab"
                 data-icon="facebook-f"
-                class="w-2.5"
+                className="w-2.5"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 320 512"
@@ -24,13 +24,13 @@ const Footer = () => {
                 ></path>
               </svg>
             </a>
-            <a href="#!" class="mr-6 text-gray-600">
+            <a href="#!" className="mr-6 text-gray-600">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fab"
                 data-icon="twitter"
-                class="w-4"
+                className="w-4"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -41,13 +41,13 @@ const Footer = () => {
                 ></path>
               </svg>
             </a>
-            <a href="#!" class="mr-6 text-gray-600">
+            <a href="#!" className="mr-6 text-gray-600">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fab"
                 data-icon="google"
-                class="w-3.5"
+                className="w-3.5"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 488 512"
@@ -58,13 +58,13 @@ const Footer = () => {
                 ></path>
               </svg>
             </a>
-            <a href="#!" class="mr-6 text-gray-600">
+            <a href="#!" className="mr-6 text-gray-600">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fab"
                 data-icon="instagram"
-                class="w-3.5"
+                className="w-3.5"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -75,13 +75,13 @@ const Footer = () => {
                 ></path>
               </svg>
             </a>
-            <a href="#!" class="mr-6 text-gray-600">
+            <a href="#!" className="mr-6 text-gray-600">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fab"
                 data-icon="linkedin-in"
-                class="w-3.5"
+                className="w-3.5"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -92,13 +92,13 @@ const Footer = () => {
                 ></path>
               </svg>
             </a>
-            <a href="#!" class="text-gray-600">
+            <a href="#!" className="text-gray-600">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fab"
                 data-icon="github"
-                class="w-4"
+                className="w-4"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"
@@ -111,9 +111,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div class="mx-6 py-10 text-center md:text-left">
-          <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="">
+        <div className="mx-6 py-10 text-center md:text-left">
+          <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="">
               <img
                 src="assets/images/logo.png"
                 alt="Logo"
@@ -126,67 +126,67 @@ const Footer = () => {
                 dolor consectetur nisi.
               </p>
             </div>
-            <div class="">
-              <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+            <div className="">
+              <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
                 Events
               </h6>
-              <p class="mb-4">
-                <a href="#!" class="text-gray-600">
+              <p className="mb-4">
+                <a href="#!" className="text-gray-600">
                   lorem ipsum
                 </a>
               </p>
-              <p class="mb-4">
-                <a href="#!" class="text-gray-600">
+              <p className="mb-4">
+                <a href="#!" className="text-gray-600">
                   lorem ipsum
                 </a>
               </p>
-              <p class="mb-4">
-                <a href="#!" class="text-gray-600">
+              <p className="mb-4">
+                <a href="#!" className="text-gray-600">
                   lorem ipsum
                 </a>
               </p>
               <p>
-                <a href="#!" class="text-gray-600">
+                <a href="#!" className="text-gray-600">
                   lorem ipsum
                 </a>
               </p>
             </div>
-            <div class="">
-              <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+            <div className="">
+              <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
                 Useful links
               </h6>
-              <p class="mb-4">
-                <a href="#!" class="text-gray-600">
+              <p className="mb-4">
+                <a href="#!" className="text-gray-600">
                   Home
                 </a>
               </p>
-              <p class="mb-4">
-                <a href="#!" class="text-gray-600">
+              <p className="mb-4">
+                <a href="#!" className="text-gray-600">
                   Speaker
                 </a>
               </p>
-              <p class="mb-4">
-                <a href="#!" class="text-gray-600">
+              <p className="mb-4">
+                <a href="#!" className="text-gray-600">
                   Timeline
                 </a>
               </p>
               <p>
-                <a href="#!" class="text-gray-600">
+                <a href="#!" className="text-gray-600">
                   Sponser
                 </a>
               </p>
             </div>
-            <div class="">
-              <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+            <div className="">
+              <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
                 Contact
               </h6>
-              <p class="flex items-center justify-center md:justify-start mb-4">
+              <p className="flex items-center justify-center md:justify-start mb-4">
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="home"
-                  class="w-4 mr-4"
+                  className="w-4 mr-4"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 576 512"
@@ -198,13 +198,13 @@ const Footer = () => {
                 </svg>
                 New York, NY 10012, US
               </p>
-              <p class="flex items-center justify-center md:justify-start mb-4">
+              <p className="flex items-center justify-center md:justify-start mb-4">
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="envelope"
-                  class="w-4 mr-4"
+                  className="w-4 mr-4"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -216,13 +216,13 @@ const Footer = () => {
                 </svg>
                 info@example.com
               </p>
-              <p class="flex items-center justify-center md:justify-start mb-4">
+              <p className="flex items-center justify-center md:justify-start mb-4">
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="phone"
-                  class="w-4 mr-4"
+                  className="w-4 mr-4"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -234,13 +234,13 @@ const Footer = () => {
                 </svg>
                 + 01 234 567 88
               </p>
-              <p class="flex items-center justify-center md:justify-start">
+              <p className="flex items-center justify-center md:justify-start">
                 <svg
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
                   data-icon="print"
-                  class="w-4 mr-4"
+                  className="w-4 mr-4"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -255,10 +255,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="text-center p-6 bg-gray-200">
+        <div className="text-center p-6 bg-gray-200">
           <span>© 2021 Copyright:</span>
           <a
-            class="text-gray-600 font-semibold"
+            className="text-gray-600 font-semibold"
             href="https://tailwind-elements.com/"
           >
             GDG Cloud Kolkata
