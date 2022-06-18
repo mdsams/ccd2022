@@ -5,6 +5,7 @@ import Loading from './Components/Loading'
 import Speakers from './Components/Speakers/Speakers'
 import About from './Components/About/About'
 import Team from './Components/Teams/Teams'
+import Sponsors from './Components/Sponsors/Sponsors'
 
 const Page = () => {
   return (
@@ -14,6 +15,7 @@ const Page = () => {
       <About />
       <Speakers />
       <Team />
+      <Sponsors />
     </>
   )
 }
