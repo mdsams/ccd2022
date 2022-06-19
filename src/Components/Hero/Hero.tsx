@@ -1,4 +1,5 @@
 import Countdown from './Countdown'
+import logo from '../../Images/logo.png';
 
 const Hero = () => {
   return (
@@ -13,7 +14,7 @@ const Hero = () => {
             on exciting topics!
           </p>
           <p className="text-xl py-4">Organized By</p>
-          <img className="w-2/4" src="assets/images/logo.png" alt="Logo" />
+          <img className="w-2/4" src={logo} alt="Logo" />
           <p className="text-xl py-4 text-lightGrey">Dates yet to be Announced</p>
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4">
             <button className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 text-white uppercase font-semibold py-4 px-8 rounded ">

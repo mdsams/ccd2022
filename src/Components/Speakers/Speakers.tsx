@@ -1,6 +1,6 @@
-import Title from '../Title'
+import Title from '../Title/Title'
 import speakersData from './speakersData.json'
-import Socials from '../Social'
+import Socials from '../Socials/Socials'
 
 const Speakers = () => {
   const imageBorderStyle = {
