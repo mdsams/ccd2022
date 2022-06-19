@@ -1,8 +1,94 @@
 import Countdown from './Countdown'
+import Particles from 'react-tsparticles'
+import { loadFull } from 'tsparticles'
 
 const Hero = () => {
+  const particlesInit = async (main: any) => {
+    await loadFull(main)
+  }
+  // const particlesLoaded = (container: any) => {
+  //   console.log(container)
+  // }
   return (
     <>
+      <Particles
+        id="tsparticles"
+        className="absolute -z-50 h-screen w-full"
+        init={particlesInit}
+        options={{
+          background: {
+            color: {
+              value: '#FFF'
+            }
+          },
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: 'push'
+              },
+              onHover: {
+                enable: true,
+                mode: 'repulse'
+              },
+              resize: true
+            },
+            modes: {
+              push: {
+                quantity: 4
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4
+              }
+            }
+          },
+          particles: {
+            color: {
+              value: ['#4285F4', '#34A853', '#FBBC05', '#EA4335']
+            },
+            links: {
+              color: 'random',
+              distance: 150,
+              enable: true,
+              opacity: 0.5,
+              width: 1
+            },
+            collisions: {
+              enable: true
+            },
+            move: {
+              direction: 'none',
+              enable: true,
+              outModes: {
+                default: 'bounce'
+              },
+              random: false,
+              speed: 4,
+              straight: false
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800
+              },
+              value: 80
+            },
+            opacity: {
+              value: 0.5
+            },
+            shape: {
+              type: 'circle'
+            },
+            size: {
+              value: { min: 1, max: 5 }
+            }
+          },
+          fullScreen: { enable: false },
+          detectRetina: true
+        }}
+      />
       <div className="w-3/4 h-screen items-center flex flex-col lg:flex-row my-0 mx-auto gap-12 pt-20 lg:pt-0">
         <div className="w-full lg:w-1/2">
           <p className="text-5xl font-semibold text-lightGrey">
