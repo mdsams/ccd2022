@@ -87,7 +87,7 @@ export default function Navbar() {
         </div>
 
         <div className={`${isOpen === false ? 'hidden' : ''}`}>
-          <ul className="">
+          <ul className="bg-white border border-b-2 border-gray-200">
             <li className="active">
               <a
                 href="index.html"
@@ -99,7 +99,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#services"
-                className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
+                className="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300"
               >
                 Speakers
               </a>
@@ -107,7 +107,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#about"
-                className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
+                className="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300"
               >
                 Timeline
               </a>
@@ -115,7 +115,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#contact"
-                className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
+                className="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300"
               >
                 Sponsors
               </a>
