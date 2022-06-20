@@ -2,7 +2,10 @@ import { useState } from 'react'
 import Title from '../Title/Title'
 
 const FAQ = () => {
-  const [showlist, setShowlist] = useState<boolean[]>([false, false, false, false])
+  const [question1, setQuestion1] = useState<boolean>(false)
+  const [question2, setQuestion2] = useState<boolean>(false)
+  const [question3, setQuestion3] = useState<boolean>(false)
+  const [question4, setQuestion4] = useState<boolean>(false)
   return (
     <div className="grid sm:grid-cols-1 md:grid-cols-2 my-7 place-items-center px-8">
       <div>
@@ -17,8 +20,8 @@ const FAQ = () => {
         <div className="pb-1">
           <h2>
             <div
-              onClick={() => setShowlist([true, false, false, false])}
-              className="cursor-pointer flex justify-between rounded-xl  items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+              onClick={() => setQuestion1(!question1)}
+              className="cursor-pointer flex justify-between rounded-xl  items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <span>What is this website?</span>
               <svg
@@ -36,7 +39,7 @@ const FAQ = () => {
               </svg>
             </div>
           </h2>
-          <div className={`${!showlist[0] ? 'hidden' : ''}`}>
+          <div className={`${!question1 ? 'hidden' : ''}`}>
             <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
               <p className="mb-2 text-gray-500 dark:text-gray-400">
                 This website is a collection of links to various websites that I have
@@ -49,8 +52,8 @@ const FAQ = () => {
         <div className="pb-1">
           <h2>
             <div
-              onClick={() => setShowlist([false, true, false, false])}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+              onClick={() => setQuestion2(!question2)}
+              className="cursor-pointer flex justify-between rounded-xl items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <span>What is this website?</span>
               <svg
@@ -68,7 +71,7 @@ const FAQ = () => {
               </svg>
             </div>
           </h2>
-          <div className={`${!showlist[1] ? 'hidden' : ''}`}>
+          <div className={`${!question2 ? 'hidden' : ''}`}>
             <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
               <p className="mb-2 text-gray-500 dark:text-gray-400">
                 This website is a collection of links to various websites that I have
@@ -81,8 +84,8 @@ const FAQ = () => {
         <div className="pb-1">
           <h2>
             <div
-              onClick={() => setShowlist([false, false, true, false])}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+              onClick={() => setQuestion3(!question3)}
+              className="cursor-pointer flex justify-between rounded-xl items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <span>What is this website?</span>
               <svg
@@ -100,7 +103,7 @@ const FAQ = () => {
               </svg>
             </div>
           </h2>
-          <div className={`${!showlist[2] ? 'hidden' : ''}`}>
+          <div className={`${!question3 ? 'hidden' : ''}`}>
             <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
               <p className="mb-2 text-gray-500 dark:text-gray-400">
                 This website is a collection of links to various websites that I have
@@ -113,8 +116,8 @@ const FAQ = () => {
         <div className="pb-1">
           <h2>
             <div
-              onClick={() => setShowlist([false, false, false, true])}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+              onClick={() => setQuestion4(!question4)}
+              className="cursor-pointer flex justify-between rounded-xl items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <span>What is this website?</span>
               <svg
@@ -132,7 +135,7 @@ const FAQ = () => {
               </svg>
             </div>
           </h2>
-          <div className={`${!showlist[3] ? 'hidden' : ''}`}>
+          <div className={`${!question4 ? 'hidden' : ''}`}>
             <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
               <p className="mb-2 text-gray-500 dark:text-gray-400">
                 This website is a collection of links to various websites that I have
