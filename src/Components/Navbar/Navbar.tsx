@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import logo from '../../Images/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,7 +28,7 @@ export default function Navbar() {
               <div>
                 <a href="#!" className="flex items-center py-4 px-2">
                   <img
-                    src="assets/images/logo.png"
+                    src={logo}
                     alt="Logo"
                     className="h-8 w-40 mr-2"
                   />

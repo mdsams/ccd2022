@@ -1,7 +1,7 @@
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import { useState, useEffect } from 'react'
-import Loading from './Components/Loading'
+import Loading from './Components/Loading/Loading'
 import Speakers from './Components/Speakers/Speakers'
 import About from './Components/About/About'
 import Team from './Components/Teams/Teams'

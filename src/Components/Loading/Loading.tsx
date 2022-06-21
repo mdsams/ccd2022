@@ -1,4 +1,4 @@
-import gdgLogo from '../Images/gdsc-logo.gif'
+import gdgLogo from '../../Images/gdsc-logo.gif'
 
 function Loading() {
   return (
