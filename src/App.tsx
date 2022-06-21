@@ -3,9 +3,11 @@ import Hero from './Components/Hero/Hero'
 import { useState, useEffect } from 'react'
 import Loading from './Components/Loading/Loading'
 import Speakers from './Components/Speakers/Speakers'
-import About from './Components/About/About'
 import Team from './Components/Teams/Teams'
+import Footer from './Components/Footer/Footer'
+import FAQ from './Components/FAQ/FAQ'
 import Sponsors from './Components/Sponsors/Sponsors'
+import About from './Components/About/About'
 
 const Page = () => {
   return (
@@ -15,7 +17,9 @@ const Page = () => {
       <About />
       <Speakers />
       <Team />
+      <FAQ />
       <Sponsors />
+      <Footer />
     </>
   )
 }
