@@ -11,10 +11,10 @@ module.exports = {
         googleBlue: '#4285F4',
         googleGreen: '#34A853',
         googleYellow: '#FBBC05',
-        googleRed: '#EA4335'
+        googleRed: '#EA4335',
+        regalBlue: '#2F327D'
       }
     }
   },
- plugins: [require('tailwindcss-animation-delay')],
+  plugins: [require('tailwindcss-animation-delay')]
 }
-

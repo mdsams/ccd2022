@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer'
 import FAQ from './Components/FAQ/FAQ'
 import Sponsors from './Components/Sponsors/Sponsors'
 import About from './Components/About/About'
+import Coc from './Components/Coc/Coc'
 
 const Page = () => {
   return (
@@ -17,6 +18,7 @@ const Page = () => {
       <About />
       <Speakers />
       <Team />
+      <Coc />
       <FAQ />
       <Sponsors />
       <Footer />
