@@ -12,7 +12,8 @@ module.exports = {
         googleGreen: '#34A853',
         googleYellow: '#FBBC05',
         googleRed: '#EA4335',
-        regalBlue: '#2F327D'
+        regalBlue: '#2F327D',
+        imageBlue: '#a9ced4'
       }
     }
   },

@@ -1,11 +1,11 @@
-import React from 'react'
 import Title from '../Title/Title'
+import COC from '../../Images/COC.gif'
 
 const Coc = () => {
   return (
     <>
       <Title heading="Code Of Conduct" />
-      <div className="grid sm:grid-cols-1 md:grid-cols-2  place-items-center bg-opacity-50">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 place-items-center bg-opacity-50">
         <div className="w-full lg:w-3/4 my-0 mx-auto pl-20">
           <h3 className="text-3xl py-5 font-bold">AntiHarassment Policy</h3>
           <h3 className="text-regalBlue text-s font-bold">
@@ -44,6 +44,9 @@ const Coc = () => {
             <li>Harassing photography or recording</li>
             <li>Stalking</li>
           </ul>
+        </div>
+        <div className="shadow-2xl shadow-imageBlue bg-transparent sm:mt-4 mb-4">
+          <img src={COC} alt="COC" className=" rounded-xl" />
         </div>
       </div>
     </>
