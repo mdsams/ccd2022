@@ -5,12 +5,12 @@ const Coc = () => {
   return (
     <>
       <Title heading="Code Of Conduct" />
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 place-items-center bg-opacity-50">
-        <div className="w-full lg:w-3/4 my-0 mx-auto pl-20">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-2 place-items-center px-8">
+        <div className="w-full lg:w-3/4 my-0 mx-auto sm:text-left">
           <h3 className="text-3xl py-5 font-bold">AntiHarassment Policy</h3>
           <h3 className="text-regalBlue text-s font-bold">
-            Why do we have an official Anti-Harassment policy for Developer Student
-            Clubs NSEC events?
+            Why do we have an official Anti-Harassment policy for Google Developer
+            Group?
           </h3>
           <ul className="list-disc ml-6">
             <li>
@@ -45,8 +45,8 @@ const Coc = () => {
             <li>Stalking</li>
           </ul>
         </div>
-        <div className="shadow-2xl shadow-imageBlue bg-transparent sm:mt-4 mb-4">
-          <img src={COC} alt="COC" className=" rounded-xl" />
+        <div className="shadow-2xl shadow-imageBlue bg-transparent my-10 ">
+          <img src={COC} alt="COC" width={600} className=" rounded-xl" />
         </div>
       </div>
     </>
