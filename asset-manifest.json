@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ccd2022/static/css/main.3feeb67b.css",
+    "main.js": "/ccd2022/static/js/main.d9005304.js",
+    "static/media/gdsc-logo.gif": "/ccd2022/static/media/gdsc-logo.c4dc897894a7a1e2b603.gif",
+    "static/media/logo.png": "/ccd2022/static/media/logo.26ff8abf519779175358.png",
+    "index.html": "/ccd2022/index.html",
+    "main.3feeb67b.css.map": "/ccd2022/static/css/main.3feeb67b.css.map",
+    "main.d9005304.js.map": "/ccd2022/static/js/main.d9005304.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3feeb67b.css",
+    "static/js/main.d9005304.js"
+  ]
+}
