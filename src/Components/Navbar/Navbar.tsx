@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import logo from '../../Images/logo.png';
+import logo from '../../Images/logo.png'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,11 +27,7 @@ export default function Navbar() {
             <div className="flex space-x-7">
               <div>
                 <a href="#!" className="flex items-center py-4 px-2">
-                  <img
-                    src={logo}
-                    alt="Logo"
-                    className="h-8 w-40 mr-2"
-                  />
+                  <img src={logo} alt="Logo" className="h-8 w-40 mr-2" />
                 </a>
               </div>
             </div>
@@ -74,9 +70,9 @@ export default function Navbar() {
                   className=" w-6 h-6 text-gray-500 hover:text-green-500 "
                   x-show="!showMenu"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
