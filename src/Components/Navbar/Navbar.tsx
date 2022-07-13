@@ -20,7 +20,9 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`${scrolled ? 'shadow-lg backdrop-blur-sm' : ''} fixed w-full`}
+        className={`${
+          scrolled ? 'shadow-lg backdrop-blur-sm' : ''
+        } z-[100] fixed w-full`}
       >
         <div className="max-w-6xl mx-auto  px-4">
           <div className="flex justify-between">
