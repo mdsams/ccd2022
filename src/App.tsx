@@ -9,11 +9,12 @@ import FAQ from './Components/FAQ/FAQ'
 import Sponsors from './Components/Sponsors/Sponsors'
 import About from './Components/About/About'
 import Coc from './Components/Coc/Coc'
+import Form from './Components/Form/Form'
 
 const Page = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Hero />
       <About />
       <Speakers />
@@ -21,7 +22,8 @@ const Page = () => {
       <Coc />
       <FAQ />
       <Sponsors />
-      <Footer />
+      <Footer /> */}
+      <Form />
     </>
   )
 }
