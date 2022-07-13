@@ -14,8 +14,8 @@ const Home = () => {
       <Navbar />
       <Hero />
       <About />
-      <Speakers />
-      <Team />
+      {/* <Speakers /> */}
+      {/* <Team /> */}
       <Coc />
       <FAQ />
       <Sponsors />

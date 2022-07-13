@@ -60,13 +60,10 @@ const Hero = () => {
           alt="hero"
         /> */}
           <div className="">
-            <p className="text-center text-4xl font-semibold text-lightGrey my-4">
-              Happening In
-            </p>
             <Countdown />
           </div>
         </div>
-        <div className="fixed bottom-4 left-1/2">
+        {/* <div className="fixed bottom-4 left-1/2">
           <div className="animate-bounce bg-white p-2 w-10 h-10 ring-1 ring-slate-900/5 shadow-lg rounded-full flex items-center justify-center">
             <svg
               className="w-6 h-6 text-violet-500"
@@ -80,7 +77,7 @@ const Hero = () => {
               <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   )
