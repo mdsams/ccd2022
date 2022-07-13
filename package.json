@@ -21,8 +21,8 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --passWithNoTests",
+    "build": "CI=false && react-scripts build",
+    "test": "CI=false && react-scripts test --env=jsdom --passWithNoTests",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
