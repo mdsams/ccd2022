@@ -1,20 +1,8 @@
+// import Countdown from './Countdown'
 import Countdown from '../../Components/Countdown/Countdown'
 import logo from '../../Images/logo.png'
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { auth, signInWithGoogle } from '../../services/UserAuth'
-import { useAuthState } from 'react-firebase-hooks/auth'
 
 const Hero = () => {
-  const [user, loading, error] = useAuthState(auth)
-  const navigate = useNavigate()
-  useEffect(() => {
-    if (loading) {
-      // maybe trigger a loading screen
-      return
-    }
-    if (user) navigate('/rsvp')
-  }, [user, loading])
 
   return (
     <>
@@ -34,10 +22,9 @@ const Hero = () => {
           </p>
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4">
             <button
-              className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 text-white uppercase font-semibold py-4 px-8 rounded"
-              onClick={signInWithGoogle}
+              className="bg-blue-500 text-white uppercase font-semibold py-4 px-8 rounded"
             >
-              Reserve Your Seat
+              Application Pending
             </button>
             <a
               className="transition ease-in-out delay-150 bg-green-600 hover:-translate-y-1 hover:scale-110 hover:bg-emerald-600 duration-300 text-center rounded"
