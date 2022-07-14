@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
-import logo from '../../Images/logo.png';
-import svglogo from '../../Images/logo.svg';
+// import logo from '../../Images/logo.png';
+import svglogo from '../../Images/logo.svg'
+import { auth, logout } from '../../services/UserAuth'
+import { useAuthState } from 'react-firebase-hooks/auth'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [user] = useAuthState(auth)
 
   useEffect(() => {
     window.onscroll = function () {
@@ -40,7 +43,7 @@ export default function Navbar() {
                 <a
                   href="#!"
                   className="py-4 px-2 text-googleBlue border-b-4 border-googleBlue font-semibold "
-                  style={{textDecoration: "none"}}
+                  style={{ textDecoration: 'none' }}
                 >
                   Home
                 </a>
@@ -63,6 +66,16 @@ export default function Navbar() {
                   Sponsors
                 </a> */}
               </div>
+              {user ? (
+                <button
+                  className="mt-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-black py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                  onClick={logout}
+                >
+                  Log Out
+                </button>
+              ) : (
+                ''
+              )}
             </div>
 
             <div className="md:hidden flex items-center">
@@ -92,11 +105,24 @@ export default function Navbar() {
             <li className="active">
               <a
                 href="index.html"
-                className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold"
+                className="block text-sm px-2 py-4 text-black font-semibold"
               >
                 Home
               </a>
             </li>
+            {user ? (
+              <li onClick={logout}>
+                <a
+                  href="/"
+                  className="block text-sm px-2 py-4 text-black font-semibold"
+                >
+                  Log Out
+                </a>
+              </li>
+            ) : (
+              ''
+            )}
+
             {/* <li>
               <a
                 href="#services"

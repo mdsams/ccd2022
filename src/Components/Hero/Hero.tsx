@@ -6,14 +6,15 @@ import { auth, signInWithGoogle } from '../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 
 const Hero = () => {
-  const [user, loading, error] = useAuthState(auth)
+  const [user, loading] = useAuthState(auth)
   const navigate = useNavigate()
+
   useEffect(() => {
     if (loading) {
       // maybe trigger a loading screen
       return
     }
-    if (user) navigate('/rsvp')
+    if (user) navigate('/dashboard')
   }, [user, loading])
 
   return (
@@ -33,12 +34,22 @@ const Hero = () => {
             Dates: 27-28<sup className="mr-0.5">th</sup>August
           </p>
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4">
-            <button
-              className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 text-white uppercase font-semibold py-4 px-8 rounded"
-              onClick={signInWithGoogle}
-            >
-              Reserve Your Seat
-            </button>
+            {user ? (
+              <button
+                className="transition ease-in-out delay-150 bg-yellow-500 hover:-translate-y-1 hover:scale-110 hover:bg-yellow-600 duration-300 text-white uppercase font-semibold py-4 px-8 rounded"
+                onClick={() => navigate('/rsvp')}
+              >
+                Application Pending
+              </button>
+            ) : (
+              <button
+                className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 text-white uppercase font-semibold py-4 px-8 rounded"
+                onClick={signInWithGoogle}
+              >
+                Reserve Your Seat
+              </button>
+            )}
+
             <a
               className="transition ease-in-out delay-150 bg-green-600 hover:-translate-y-1 hover:scale-110 hover:bg-emerald-600 duration-300 text-center rounded"
               href="https://sessionize.com/cloud-community-days"
