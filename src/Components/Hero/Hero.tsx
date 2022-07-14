@@ -14,7 +14,7 @@ const Hero = () => {
       // maybe trigger a loading screen
       return
     }
-    if (user) navigate('/dashboard')
+    if (user) navigate('/ccd2022/dashboard')
   }, [user, loading])
 
   return (

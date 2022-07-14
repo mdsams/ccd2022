@@ -20,8 +20,12 @@ export default function Navigation() {
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Home />} />
-        <Route path="/rsvp" element={<PrivateRoute component={Forms} />} />
-        <Route path="/dashboard" element={<PrivateRoute component={Dashboard} />} />
+        <Route path="/ccd2022" element={<Home />} />
+        <Route path="/ccd2022/rsvp" element={<PrivateRoute component={Forms} />} />
+        <Route
+          path="/ccd2022/dashboard"
+          element={<PrivateRoute component={Dashboard} />}
+        />
       </Routes>
     </Router>
   )
