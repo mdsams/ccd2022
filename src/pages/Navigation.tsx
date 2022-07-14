@@ -10,7 +10,7 @@ import NotFound from './NotFound/NotFound'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const [user] = useAuthState(auth)
-  return user ? <Component /> : <Navigate to="/" replace />
+  return user ? <Component /> : <Navigate to="/ccd2022" replace />
 }
 
 export default function Navigation() {
