@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import svglogo from '../../Images/logo.svg'
 import { auth, logout } from '../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -41,7 +42,7 @@ export default function Navbar() {
             <div className="hidden md:flex items-center space-x-3">
               <div className="hidden md:flex items-center space-x-3">
                 <a
-                  href="#!"
+                  href="/ccd2022"
                   className="py-4 px-2 text-googleBlue border-b-4 border-googleBlue font-semibold "
                   style={{ textDecoration: 'none' }}
                 >
@@ -67,12 +68,14 @@ export default function Navbar() {
                 </a> */}
               </div>
               {user ? (
-                <button
-                  className="mt-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-black py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-                  onClick={logout}
-                >
-                  Log Out
-                </button>
+                <Link to="/ccd2022">
+                  <button
+                    className="mt-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-black py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                    onClick={logout}
+                  >
+                    Log Out
+                  </button>
+                </Link>
               ) : (
                 ''
               )}
@@ -104,7 +107,7 @@ export default function Navbar() {
           <ul className="bg-white border border-b-2 border-gray-200">
             <li className="active">
               <a
-                href="index.html"
+                href="/ccd2022"
                 className="block text-sm px-2 py-4 text-black font-semibold"
               >
                 Home
@@ -112,12 +115,11 @@ export default function Navbar() {
             </li>
             {user ? (
               <li onClick={logout}>
-                <a
-                  href="/"
-                  className="block text-sm px-2 py-4 text-black font-semibold"
-                >
-                  Log Out
-                </a>
+                <Link to="/ccd2022">
+                  <p className="block text-sm px-2 py-4 text-black font-semibold">
+                    Log Out
+                  </p>
+                </Link>
               </li>
             ) : (
               ''

@@ -14,7 +14,7 @@ const Hero = () => {
       // maybe trigger a loading screen
       return
     }
-    if (user) navigate('/dashboard')
+    if (user) navigate('/ccd2022/dashboard')
   }, [user, loading])
 
   return (
@@ -37,7 +37,7 @@ const Hero = () => {
             {user ? (
               <button
                 className="transition ease-in-out delay-150 bg-yellow-500 hover:-translate-y-1 hover:scale-110 hover:bg-yellow-600 duration-300 text-white uppercase font-semibold py-4 px-8 rounded"
-                onClick={() => navigate('/rsvp')}
+                onClick={() => navigate('/ccd2022/rsvp')}
               >
                 Application Pending
               </button>
