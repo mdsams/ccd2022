@@ -8,6 +8,7 @@ import app from "../../services/firebase";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Stack } from "react-bootstrap";
 
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
@@ -72,6 +73,7 @@ const Forms = () => {
         <>
             <Title heading="Registration Form" />
             <form onSubmit={RegistrationEvent}>
+            <Stack gap={3} className="col-md-6 mx-auto">
                 <Modal.Body>
                     <Form.Group>
                         <Form.Label>
@@ -84,6 +86,7 @@ const Forms = () => {
                             <option value="Decline to specify">Decline to specify</option>
                         </Form.Select>
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>
                             I am a... (Select the title or role that's the closest fit.)*
@@ -108,6 +111,7 @@ const Forms = () => {
                             <option value="Decline to specify">Decline to Specify</option>
                         </Form.Select>
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>
                             My level of developer experience is...*
@@ -149,6 +153,7 @@ const Forms = () => {
                             onChange={(e) => {console.log(e.target.value);setExperience(e.target.value)}}
                         />
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Check 
                             type="checkbox"
@@ -162,14 +167,17 @@ const Forms = () => {
                             the GDG event code of conduct for my attendance at any GDG event, both in-person and online.
                         </Form.Label>
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>Email</Form.Label>
                         <Form.Control type="email" name="email" placeholder="your email" required value={email} onChange={(e) => {console.log(e.target.value);setEmail(e.target.value)}}/>
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>Phone Number*</Form.Label>
                         <Form.Control type="tel" name="contact" required value={contactNumber} placeholder="your phone number" onChange={(e) => {console.log(e.target.value);setContactNumber(e.target.value)}} />
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Check 
                             type="checkbox"
@@ -178,26 +186,32 @@ const Forms = () => {
                             onChange={(e) => {console.log(e.target.value);setEnrolled(e.target.value)}}
                         />
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>Organization/College*</Form.Label>
                         <Form.Control type="text" name="organization" required value={organization} onChange={(e) => {console.log(e.target.value);setOrganization(e.target.value)}} />
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>About you*</Form.Label>
                         <Form.Control type="text" name="about" required value={about} onChange={(e) => {console.log(e.target.value);setAbout(e.target.value)}} />
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>LinkedIn Profile Link*</Form.Label>
                         <Form.Control type="text" name="Linkedin" required value={linkedin} onChange={(e) => {console.log(e.target.value);setLinkedin(e.target.value)}} />
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>GitHub Profile Link</Form.Label>
                         <Form.Control type="text" name="github" required value={github} onChange={(e) => {console.log(e.target.value);setGithub(e.target.value)}} />
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>Blog/Website</Form.Label>
                         <Form.Control type="text" name="blog/website" required value={blog} onChange={(e) => {console.log(e.target.value);setBlog(e.target.value)}} />
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>
                             Which parts of the event are you interested in?*
@@ -215,6 +229,7 @@ const Forms = () => {
                             onChange={(e) => {console.log(e.target.value);setConference(e.target.value)}}
                         />
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>
                             Dietary restrictions*
@@ -228,6 +243,7 @@ const Forms = () => {
                             <option value="Other">Other</option>
                         </Form.Select>
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Label>
                             T-shirt Size*
@@ -241,6 +257,7 @@ const Forms = () => {
                             <option value="3XL">3XL</option>
                         </Form.Select>
                     </Form.Group>
+                    <br />
                     <Form.Group>
                         <Form.Check 
                             type="checkbox"
@@ -259,6 +276,7 @@ const Forms = () => {
                 <Modal.Footer>
                     <Button variant="primary" type="submit" value="Submit">Submit</Button>
                 </Modal.Footer>
+                </Stack>
             </form>
         </>
     )

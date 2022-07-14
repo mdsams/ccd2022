@@ -40,6 +40,7 @@ export default function Navbar() {
                 <a
                   href="#!"
                   className="py-4 px-2 text-googleBlue border-b-4 border-googleBlue font-semibold "
+                  style={{textDecoration: "none"}}
                 >
                   Home
                 </a>
