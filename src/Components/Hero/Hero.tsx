@@ -36,8 +36,8 @@ const Hero = () => {
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4">
             {user ? (
               <button
-                className="transition ease-in-out delay-150 bg-yellow-500 hover:-translate-y-1 hover:scale-110 hover:bg-yellow-600 duration-300 text-white uppercase font-semibold py-4 px-8 rounded"
-                onClick={() => navigate('/ccd2022/rsvp')}
+                className="bg-yellow-500 text-white uppercase font-semibold py-4 px-8 rounded"
+                // onClick={() => navigate('/rsvp')}
               >
                 Application Pending
               </button>
