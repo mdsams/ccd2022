@@ -7,7 +7,8 @@ import { auth, db } from '../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import Dashboard from './Dashboard/Dashboard'
 import NotFound from './NotFound/NotFound'
-import { getDocs, collection } from 'firebase/firestore'
+import { encode as base64_encode } from 'base-64'
+import { getDoc, doc } from 'firebase/firestore'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const [user] = useAuthState(auth)
@@ -18,20 +19,22 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 //   const [user] = useAuthState(auth)
 //   const [isExist, setIsExist] = useState(true)
 
-//   async function FindEmail() {
+//   async function DocumentID() {
 //     if (user) {
-//       const querySnapshot = await getDocs(collection(db, 'register'))
-//       querySnapshot.forEach((doc) => {
-//         if (doc.data().email !== user.email) {
-//           setIsExist(false)
-//         }
-//       })
+//       let encodedEmail = base64_encode(user.email)
+//       const docRef = doc(db, 'register', encodedEmail)
+//       const docSnap = await getDoc(docRef)
+//       if (docSnap.exists()) {
+//         setIsExist(true)
+//       } else {
+//         setIsExist(false)
+//       }
 //     }
 //   }
 
-//   useEffect(() => {
-//     FindEmail()
-//   }, [])
+//   if (user) {
+//     DocumentID()
+//   }
 
 //   return user && !isExist ? (
 //     <Component />
