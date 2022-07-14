@@ -20,26 +20,26 @@ const Hero = () => {
       navigate('/ccd2022/dashboard')
     }
 
-    // async function FindEmail() {
-    //   if (user) {
-    //     const querySnapshot = await getDocs(collection(db, 'register'))
-    //     querySnapshot.forEach((doc) => {
-    //       if (doc.data().email === user.email) {
-    //         console.log('email is exist')
-    //         setIsExist(true)
-    //         return null
-    //         // navigate('/ccd2022/dashboard')
-    //         // setIsExist(false)
-    //       }
-    //     })
-    //   }
-    // }
+    async function FindEmail() {
+      if (user) {
+        const querySnapshot = await getDocs(collection(db, 'register'))
+        querySnapshot.forEach((doc) => {
+          if (doc.data().email === user.email) {
+            console.log('email is exist')
+            setIsExist(true)
+            return null
+            // navigate('/ccd2022/dashboard')
+            // setIsExist(false)
+          }
+        })
+      }
+    }
 
-    // FindEmail()
+    FindEmail()
 
-    // if (user && !isExist) {
-    //   navigate('/ccd2022/rsvp')
-    // }
+    if (user && !isExist) {
+      navigate('/ccd2022/rsvp')
+    }
   }, [user, loading, navigate])
 
   return (
