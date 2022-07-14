@@ -62,7 +62,7 @@ const Hero = () => {
                     <button
                       className="bg-yellow-500 text-white uppercase font-semibold py-4 px-8 rounded"
                     >
-                      Application Pending
+                      Under Review
                     </button>) : (
                     <button
                       className="bg-yellow-500 text-white uppercase font-semibold py-4 px-8 rounded"
