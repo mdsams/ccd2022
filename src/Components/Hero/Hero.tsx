@@ -1,46 +1,41 @@
 import Countdown from '../../Components/Countdown/Countdown'
 import logo from '../../Images/logo.png'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { db, auth, signInWithGoogle } from '../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { getDocs, collection } from 'firebase/firestore'
+import { getDoc, doc } from 'firebase/firestore'
+import { encode as base64_encode } from 'base-64'
 
 const Hero = () => {
-  const [user, loading] = useAuthState(auth)
+  const [user, loading]: any = useAuthState(auth)
   const navigate = useNavigate()
-  const [isExist, setIsExist] = useState(false)
 
   useEffect(() => {
     if (loading) {
       // maybe trigger a loading screen
       return
     }
-    if (user) {
-      navigate('/ccd2022/dashboard')
-    }
 
-    async function FindEmail() {
+    async function DocumentID() {
       if (user) {
-        const querySnapshot = await getDocs(collection(db, 'register'))
-        querySnapshot.forEach((doc) => {
-          if (doc.data().email === user.email) {
-            console.log('email is exist')
-            setIsExist(true)
-            return null
-            // navigate('/ccd2022/dashboard')
-            // setIsExist(false)
-          }
-        })
+        let encodedEmail = base64_encode(user.email)
+        const docRef = doc(db, 'register', encodedEmail)
+        const docSnap = await getDoc(docRef)
+        if (docSnap.exists()) {
+          console.log('Document exists')
+          navigate('/ccd2022/dashboard')
+        } else {
+          // console.log('No such document!')
+          navigate('/ccd2022/rsvp')
+        }
       }
     }
 
-    FindEmail()
-
-    if (user && !isExist) {
-      navigate('/ccd2022/rsvp')
+    if (user) {
+      DocumentID()
     }
-  }, [user, loading, navigate])
+  }, [user])
 
   return (
     <>

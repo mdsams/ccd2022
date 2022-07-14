@@ -2,10 +2,11 @@ import Title from '../Title/Title'
 import 'firebase/firestore'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { getFirestore, addDoc, collection } from 'firebase/firestore'
+import { getFirestore, setDoc, doc } from 'firebase/firestore'
 import app from '../../services/firebase'
 import { auth } from '../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
+import { encode as base64_encode } from 'base-64'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 const Forms = () => {
@@ -37,8 +38,8 @@ const Forms = () => {
   function RegistrationEvent(e) {
     e.preventDefault()
     const db = getFirestore(app)
-    const dbref = collection(db, 'register')
-    const data = {
+    const encodedEmail = base64_encode(email)
+    setDoc(doc(db, 'register', encodedEmail), {
       name: name,
       pronoun: pronoun,
       role: role,
@@ -57,11 +58,9 @@ const Forms = () => {
       diet: diet,
       tsize: tsize,
       understand: understand
-    }
-    // const db = app.firestore();
-    addDoc(dbref, data)
+    })
       .then((docRef) => {
-        console.log('Document written with ID: ', docRef.id)
+        console.log('Document written with ID: ', docRef)
         console.log('done')
         navigate('/ccd2022/dashboard')
       })
@@ -75,9 +74,9 @@ const Forms = () => {
     <>
       <Title heading="Application Form" />
       <form>
-        <section className="bg-white dark:bg-gray-900">
+        <section className="bg-white">
           <div className="pb-8 lg:pb-16 px-4 mx-auto max-w-screen-md">
-            <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+            <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
               Complete your participant application here and wait for us to get back
               to you on your application status!
             </p>
@@ -85,14 +84,14 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="full_name"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Full name
                 </label>
                 <input
                   type="text"
                   id="full_name"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="John Doe"
                   required
                   onChange={(e) => {
@@ -104,14 +103,14 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="phone"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Phone number
                 </label>
                 <input
                   type="tel"
                   id="phone"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="9000000000"
                   required
                   onChange={(e) => {
@@ -129,7 +128,7 @@ const Forms = () => {
                 </label>
                 <select
                   id="pronoun"
-                  className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   onChange={(e) => {
                     console.log(e.target.value)
                     setPronoun(e.target.value)
@@ -154,7 +153,7 @@ const Forms = () => {
                 />
                 <label
                   htmlFor="is_student"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm font-medium text-gray-900 "
                 >
                   Are you currently enrolled in a full-time undergraduate academic
                   course?
@@ -163,14 +162,14 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="organization"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Organization/College
                 </label>
                 <input
                   type="text"
                   id="organization"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="Dunder Mifflin Paper Company, Inc."
                   required
                   onChange={(e) => {
@@ -188,7 +187,7 @@ const Forms = () => {
                 </label>
                 <select
                   id="role"
-                  className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   onChange={(e) => {
                     console.log(e.target.value)
                     setRole(e.target.value)
@@ -232,7 +231,7 @@ const Forms = () => {
                 <textarea
                   id="about"
                   rows={4}
-                  className="mt-2 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="mt-2 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="I own a light saber..."
                   onChange={(e) => {
                     console.log(e.target.value)
@@ -243,14 +242,14 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="linkedin"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   LinkedIn Profile URL
                 </label>
                 <input
                   type="url"
                   id="linkedin"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="https://www.linkedin.com/in/johndoe/"
                   required
                   onChange={(e) => {
@@ -263,14 +262,14 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="github"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   GitHub Profile URL
                 </label>
                 <input
                   type="url"
                   id="github"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="https://github.com/johndoe"
                   required
                   onChange={(e) => {
@@ -283,14 +282,14 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="website"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Blog/Website URL
                 </label>
                 <input
                   type="url"
                   id="website"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="https://johndoe.com"
                   required
                   onChange={(e) => {
@@ -303,7 +302,7 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="event_parts"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   What parts of the event are you interested in?
                 </label>
@@ -322,7 +321,7 @@ const Forms = () => {
                       />
                       <label
                         htmlFor="day1"
-                        className="py-3 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300"
+                        className="py-3 ml-2 w-full text-sm font-medium text-gray-900 "
                       >
                         Workshop - Day 1
                       </label>
@@ -342,7 +341,7 @@ const Forms = () => {
                       />
                       <label
                         htmlFor="day2"
-                        className="py-3 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300"
+                        className="py-3 ml-2 w-full text-sm font-medium text-gray-900 "
                       >
                         Conference - Day 2
                       </label>
@@ -359,7 +358,7 @@ const Forms = () => {
                 </label>
                 <select
                   id="diet"
-                  className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   onChange={(e) => {
                     console.log(e.target.value)
                     setDiet(e.target.value)
@@ -382,7 +381,7 @@ const Forms = () => {
                 </label>
                 <select
                   id="tshirt"
-                  className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   onChange={(e) => {
                     console.log(e.target.value)
                     setTsize(e.target.value)
@@ -413,13 +412,13 @@ const Forms = () => {
                 <div className="ml-2 text-sm">
                   <label
                     htmlFor="tnc_checkbox"
-                    className="font-medium text-gray-900 dark:text-gray-300"
+                    className="font-medium text-gray-900 "
                   >
                     Agree to Terms and Conditions?
                   </label>
                   <p
                     id="tnc_checkbox-text"
-                    className="text-xs font-normal text-gray-500 dark:text-gray-300"
+                    className="text-xs font-normal text-gray-500 "
                   >
                     I have read and agree to the GDG Event Participation Terms and
                     acknowledge that Google will use any information I provide in
@@ -447,13 +446,13 @@ const Forms = () => {
                 <div className="ml-2 text-sm">
                   <label
                     htmlFor="application_checkbox"
-                    className="font-medium text-gray-900 dark:text-gray-300"
+                    className="font-medium text-gray-900 "
                   >
                     Agree to ticketing terms?
                   </label>
                   <p
                     id="application_checkbox-text"
-                    className="text-xs font-normal text-gray-500 dark:text-gray-300"
+                    className="text-xs font-normal text-gray-500 "
                   >
                     Filling this form does not guarentee access to the event. The
                     details of my submission will be reviewed in all fairness

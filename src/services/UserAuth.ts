@@ -11,8 +11,10 @@ import {
   getDocs,
   collection,
   where,
-  addDoc,
+  setDoc,
+  doc
 } from "firebase/firestore";
+import {encode as base64_encode} from 'base-64';
 
 // Initialize Firebase
 const auth = getAuth(app);
@@ -26,7 +28,9 @@ const signInWithGoogle = async () => {
     const q = query(collection(db, "users"), where("uid", "==", user.uid));
     const docs = await getDocs(q);
     if (docs.docs.length === 0) {
-      await addDoc(collection(db, "users"), {
+      var userEmail = user.email ?? "";
+      const encodedEmail = base64_encode(userEmail);
+      await setDoc(doc(db, "users", encodedEmail), {
         uid: user.uid,
         name: user.displayName,
         authProvider: "google",
