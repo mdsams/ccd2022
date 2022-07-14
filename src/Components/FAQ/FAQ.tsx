@@ -21,7 +21,7 @@ const FAQ = () => {
         <div className="pb-1">
             <div
               onClick={() => setQuestion1(!question1)}
-              className="cursor-pointer flex justify-between rounded-xl  items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="cursor-pointer flex justify-between rounded-xl  items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <span>What is CCD 2022 Kolkata?</span>
               <svg
@@ -39,7 +39,7 @@ const FAQ = () => {
               </svg>
             </div>
           <div className={`${!question1 ? 'hidden' : ''}`}>
-            <div className="p-5 border border-b-0 border-gray-200 ">
+            <div className="p-3 border border-b-0 border-gray-200 ">
               <p className="mb-2 text-gray-500 ">
                 CCD 2022 Kolkata is short form of Cloud Community Days 2022 Kolkata
                 which is among the largest free Cloud developer conferences in
@@ -51,7 +51,7 @@ const FAQ = () => {
         <div className="pb-1">
             <div
               onClick={() => setQuestion2(!question2)}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <span>Where can I find updates related to CCD 2022 Kolkata?</span>
               <svg
@@ -69,7 +69,7 @@ const FAQ = () => {
               </svg>
             </div>
           <div className={`${!question2 ? 'hidden' : ''}`}>
-            <div className="p-5 border border-b-0 border-gray-200 ">
+            <div className="p-3 border border-b-0 border-gray-200 ">
               <p className="mb-2 text-gray-500 ">
                 All announcements related to the event are posted to the GDG Cloud
                 Kolkata chapter mailing list which you can join by Joining the
@@ -99,7 +99,7 @@ const FAQ = () => {
         <div className="pb-1">
             <div
               onClick={() => setQuestion5(!question5)}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <span>How can I attend CCD 2022 Kolkata? How much does it cost?</span>
               <svg
@@ -117,7 +117,7 @@ const FAQ = () => {
               </svg>
             </div>
           <div className={`${!question5 ? 'hidden' : ''}`}>
-            <div className="p-5 border border-b-0 border-gray-200 ">
+            <div className="p-3 border border-b-0 border-gray-200 ">
               <p className="mb-2 text-gray-500 ">
                 CCD 2022 Kolkata is a Free event. There are no costs for the ticket
                 to this event. However, you must apply to be a participant to the
@@ -131,7 +131,7 @@ const FAQ = () => {
         <div className="pb-1">
             <div
               onClick={() => setQuestion3(!question3)}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <span>
                 I want to present a talk/workshop at the conference. What should I
@@ -152,7 +152,7 @@ const FAQ = () => {
               </svg>
             </div>
           <div className={`${!question3 ? 'hidden' : ''}`}>
-            <div className="p-5 border border-b-0 border-gray-200 ">
+            <div className="p-3 border border-b-0 border-gray-200 ">
               <p className="mb-2 text-gray-500 ">
                 You can submit your talk/workshop proposal on our{' '}
                 <a href="https://sessionize.com/cloud-community-days">CFP Page</a>.
@@ -166,7 +166,7 @@ const FAQ = () => {
         <div className="pb-1">
             <div
               onClick={() => setQuestion4(!question4)}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-5 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <span>
                 Will I be provided travel/stay accommodation to attend the event?
@@ -186,7 +186,7 @@ const FAQ = () => {
               </svg>
             </div>
           <div className={`${!question4 ? 'hidden' : ''}`}>
-            <div className="p-5 border border-b-0 border-gray-200 ">
+            <div className="p-3 border border-b-0 border-gray-200 ">
               <p className="mb-2 text-gray-500 ">
                 No. There is no provision for covering attendee travel/stay. For
                 speakers, we will decide on case-by-case basis.
