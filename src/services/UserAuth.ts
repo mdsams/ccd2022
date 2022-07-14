@@ -8,7 +8,7 @@ import {
 import {
   getFirestore,
   query,
-  getDocs,
+  getDoc,
   collection,
   where,
   setDoc,
@@ -25,12 +25,10 @@ const signInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, googleProvider);
     const user = res.user;
-    const q = query(collection(db, "users"), where("uid", "==", user.uid));
-    const docs = await getDocs(q);
-    if (docs.docs.length === 0) {
-      var userEmail = user.email ?? "";
-      const encodedEmail = base64_encode(userEmail);
-      await setDoc(doc(db, "users", encodedEmail), {
+    const q = doc(db, "users", user.uid)
+    const userDoc = await getDoc(q);
+    if (!userDoc.exists()) {
+      await setDoc(doc(db, "users", user.uid), {
         uid: user.uid,
         name: user.displayName,
         authProvider: "google",

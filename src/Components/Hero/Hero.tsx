@@ -21,8 +21,8 @@ const Hero = () => {
 
     async function DocumentID() {
       if (user) {
-        let encodedEmail = base64_encode(user.email)
-        const docRef = doc(db, 'register', encodedEmail)
+        // let encodedEmail = base64_encode(user.email)
+        const docRef = doc(db, 'register', user.uid)
         const docSnap = await getDoc(docRef)
         if (docSnap.exists()) {
           setApplied(true)
