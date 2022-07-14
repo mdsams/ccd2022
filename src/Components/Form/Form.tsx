@@ -199,27 +199,6 @@ const Forms = () => {
                         </form>
                     </div>
                 </section>
-                {/* <Stack gap={3} className="col-md-6 mx-auto">
-                <Modal.Body>
-                    <Form.Group>
-                        <Form.Check 
-                            type="checkbox"
-                            value="yes"
-                            label="By checking this box, I understand that:*"
-                            onChange={(e) => {console.log(e.target.value);setUnderstand(e.target.value)}}
-                        />
-                        <Form.Label>
-                            Filling this form does not guarentee access to the event. The details of my submission will be reviewed in all fairness 
-                            complying with the Code of Conduct of the event. On availability of seats I shall be sent a Ticket Claim email which I must claim 
-                            within 72 hours from receiving the email, failing which my ticket will be transferred to those on the waitlist and I can no longer 
-                            make any claim on it nor will show up to the event without a confirmation ticket.
-                        </Form.Label>
-                    </Form.Group>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="primary" type="submit" value="Submit">Submit</Button>
-                </Modal.Footer>
-                </Stack> */}
             </form>
         </>
     )
