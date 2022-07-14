@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import logo from '../../Images/logo.png';
+import svglogo from '../../Images/logo.svg';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,18 +21,16 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`${scrolled ? 'shadow-lg backdrop-blur-sm' : ''} fixed w-full`}
+        className={`${
+          scrolled ? 'shadow-lg backdrop-blur-lg' : ''
+        } z-[100] fixed w-full`}
       >
         <div className="max-w-6xl mx-auto  px-4">
           <div className="flex justify-between">
             <div className="flex space-x-7">
               <div>
-                <a href="#!" className="flex items-center py-4 px-2">
-                  <img
-                    src={logo}
-                    alt="Logo"
-                    className="h-8 w-40 mr-2"
-                  />
+                <a href="#!" className="flex items-center pt-1 px-2">
+                  <img src={svglogo} alt="Logo" className="w-80 mr-2" />
                 </a>
               </div>
             </div>
@@ -44,7 +43,7 @@ export default function Navbar() {
                 >
                   Home
                 </a>
-                <a
+                {/* <a
                   href="#!"
                   className="py-4 px-2 text-gray-500 font-semibold hover:text-googleGreen transition duration-300"
                 >
@@ -61,7 +60,7 @@ export default function Navbar() {
                   className="py-4 px-2 text-gray-500 font-semibold hover:text-googleRed transition duration-300"
                 >
                   Sponsors
-                </a>
+                </a> */}
               </div>
             </div>
 
@@ -74,9 +73,9 @@ export default function Navbar() {
                   className=" w-6 h-6 text-gray-500 hover:text-green-500 "
                   x-show="!showMenu"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
@@ -97,7 +96,7 @@ export default function Navbar() {
                 Home
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#services"
                 className="block text-sm px-2 py-4 hover:bg-green-500 hover:text-white transition duration-300"
@@ -120,7 +119,7 @@ export default function Navbar() {
               >
                 Sponsors
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

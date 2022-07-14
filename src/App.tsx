@@ -1,29 +1,16 @@
-import Navbar from './Components/Navbar/Navbar'
-import Hero from './Components/Hero/Hero'
 import { useState, useEffect } from 'react'
 import Loading from './Components/Loading/Loading'
-import Speakers from './Components/Speakers/Speakers'
-import Team from './Components/Teams/Teams'
-import Footer from './Components/Footer/Footer'
-import FAQ from './Components/FAQ/FAQ'
-import Sponsors from './Components/Sponsors/Sponsors'
-import About from './Components/About/About'
-import Coc from './Components/Coc/Coc'
-import Form from './Components/Form/Form'
+// import Form from './Components/Form/Form'
+import Navigation from './pages/Navigation'
+// import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Forms from './Components/Form/Form';
+import Home from './pages/Home/Home';
 
 const Page = () => {
   return (
     <>
-      {/* <Navbar />
-      <Hero />
-      <About />
-      <Speakers />
-      <Team />
-      <Coc />
-      <FAQ />
-      <Sponsors />
-      <Footer /> */}
-      <Form />
+      <Navigation />
     </>
   )
 }

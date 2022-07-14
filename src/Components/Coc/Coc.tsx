@@ -7,7 +7,7 @@ const Coc = () => {
       <Title heading="Code Of Conduct" />
       <div className="grid sm:grid-cols-1 md:grid-cols-2 mt-2 place-items-center px-8">
         <div className="w-full lg:w-3/4 my-0 mx-auto sm:text-left">
-          <h3 className="text-3xl py-5 font-bold">AntiHarassment Policy</h3>
+          <h3 className="text-3xl py-5 font-bold">Anti-Harassment Policy</h3>
           <h3 className="text-regalBlue text-s font-bold">
             Why do we have an official Anti-Harassment policy for Google Developer
             Group?

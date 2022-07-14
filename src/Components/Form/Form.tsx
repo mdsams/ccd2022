@@ -4,7 +4,7 @@ import 'firebase/firestore';
 import { useState } from "react";
 
 import {getFirestore, addDoc, collection} from "firebase/firestore";
-import app from "../../Services/firebase";
+import app from "../../services/firebase";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
