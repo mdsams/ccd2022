@@ -3,9 +3,6 @@ import {
   GoogleAuthProvider,
   getAuth,
   signInWithPopup,
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-  sendPasswordResetEmail,
   signOut,
 } from "firebase/auth";
 import {
@@ -20,7 +17,6 @@ import {
 // Initialize Firebase
 const auth = getAuth(app);
 const db = getFirestore(app);
-
 const googleProvider = new GoogleAuthProvider();
 
 const signInWithGoogle = async () => {
