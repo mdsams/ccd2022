@@ -14,31 +14,31 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
   return user ? <Component /> : <Navigate to="/ccd2022" replace />
 }
 
-// const UnRegistered = ({ component: Component, ...rest }) => {
-//   const [user] = useAuthState(auth)
-//   const [isExist, setIsExist] = useState(true)
+const UnRegistered = ({ component: Component, ...rest }) => {
+  const [user] = useAuthState(auth)
+  const [isExist, setIsExist] = useState(true)
 
-//   async function FindEmail() {
-//     if (user) {
-//       const querySnapshot = await getDocs(collection(db, 'register'))
-//       querySnapshot.forEach((doc) => {
-//         if (doc.data().email !== user.email) {
-//           setIsExist(false)
-//         }
-//       })
-//     }
-//   }
+  async function FindEmail() {
+    if (user) {
+      const querySnapshot = await getDocs(collection(db, 'register'))
+      querySnapshot.forEach((doc) => {
+        if (doc.data().email !== user.email) {
+          setIsExist(false)
+        }
+      })
+    }
+  }
 
-//   useEffect(() => {
-//     FindEmail()
-//   }, [])
+  useEffect(() => {
+    FindEmail()
+  }, [])
 
-//   return user && !isExist ? (
-//     <Component />
-//   ) : (
-//     <Navigate to="/ccd2022/dashboard" replace />
-//   )
-// }
+  return user && !isExist ? (
+    <Component />
+  ) : (
+    <Navigate to="/ccd2022/dashboard" replace />
+  )
+}
 
 export default function Navigation() {
   return (
