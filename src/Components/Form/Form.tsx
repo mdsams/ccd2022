@@ -7,11 +7,12 @@ import app from "../../services/firebase";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 const Forms = () => {
+    const [name, setName] = useState('');
     const [pronoun, setPronoun] = useState("he/him");
     const [role, setRole] = useState("Architect");
-    const [experience, setExperience] = useState('false');
+    // const [experience, setExperience] = useState('false');
     const [confirm, setConfirm] = useState('');
-    const [email, setEmail] = useState('');
+    // const [email, setEmail] = useState('');
     const [contactNumber, setContactNumber] = useState('');
     const [enrolled, setEnrolled] = useState('');
     const [organization, setOrganization] = useState('');
@@ -31,11 +32,12 @@ const Forms = () => {
         const db = getFirestore(app);
         const dbref = collection(db, "register")
         const data = {
+            name: name,
             pronoun: pronoun,
             role: role,
-            experience: experience,
+            // experience: experience,
             confirm: confirm,
-            email: email,
+            // email: email,
             contact: contactNumber,
             enrolled: enrolled,
             organization: organization,
@@ -66,22 +68,22 @@ const Forms = () => {
     return (
         <>
             <Title heading="Application Form" />
-            <form onSubmit={RegistrationEvent}>
+            <form>
                 <section className="bg-white dark:bg-gray-900">
                     <div className="pb-8 lg:pb-16 px-4 mx-auto max-w-screen-md">
                         <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Complete your participant application here and wait for us to get back to you on your application status!</p>
                         <form action="#" className="space-y-8">
                             <div>
                                 <label htmlFor="full_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Full name</label>
-                                <input type="text" id="full_name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="John Doe" required />
+                                <input type="text" id="full_name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="John Doe" required onChange={(e) => {console.log(e.target.value);setName(e.target.value)}}/>
                             </div>
                             <div>
                                 <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone number</label>
-                                <input type="tel" id="phone" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="9000000000" required />
+                                <input type="tel" id="phone" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="9000000000" required onChange={(e) => {console.log(e.target.value);setContactNumber(e.target.value)}}/>
                             </div>
                             <div>
                                 <label htmlFor="pronoun" className="block text-sm font-medium text-gray-900 dark:text-gray-400">Preferred pronoun</label>
-                                <select id="pronoun" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <select id="pronoun" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => {console.log(e.target.value);setPronoun(e.target.value)}}>
                                     <option value="he/him">he/him</option>
                                     <option value="she/her">she/her</option>
                                     <option value="they/them">they/them</option>
@@ -89,16 +91,16 @@ const Forms = () => {
                                 </select>
                             </div>
                             <div className="flex items-center mb-4">
-                                <input id="is_student" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                <input id="is_student" type="checkbox" value="yes" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onChange={(e) => {console.log(e.target.value);setEnrolled(e.target.value)}}/>
                                 <label htmlFor="is_student" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Are you currently enrolled in a full-time undergraduate academic course?</label>
                             </div>
                             <div>
                                 <label htmlFor="organization" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Organization/College</label>
-                                <input type="text" id="organization" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Dunder Mifflin Paper Company, Inc." required />
+                                <input type="text" id="organization" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Dunder Mifflin Paper Company, Inc." required onChange={(e) => {console.log(e.target.value);setOrganization(e.target.value)}}/>
                             </div>
                             <div>
                                 <label htmlFor="role" className="block text-sm font-medium text-gray-900 dark:text-gray-400">Role</label>
-                                <select id="role" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <select id="role" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => {console.log(e.target.value);setRole(e.target.value)}}>
                                     <option value="Architect">Architect</option>
                                     <option value="Data Analyst">Data Analyst</option>
                                     <option value="Data Engineer">Data Engineer</option>
@@ -121,21 +123,21 @@ const Forms = () => {
                             
                             <div>
                                 <label htmlFor="about" className="mt-2 block text-sm font-medium text-gray-900 dark:text-gray-400">About you</label>
-                                <textarea id="about" rows={4} className="mt-2 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="I own a light saber..."></textarea>
+                                <textarea id="about" rows={4} className="mt-2 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="I own a light saber..."onChange={(e) => {console.log(e.target.value);setAbout(e.target.value)}}></textarea>
                             </div>
                             <div>
                                 <label htmlFor="linkedin" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">LinkedIn Profile URL</label>
-                                <input type="url" id="linkedin" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="https://www.linkedin.com/in/johndoe/" required />
+                                <input type="url" id="linkedin" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="https://www.linkedin.com/in/johndoe/" required onChange={(e) => {console.log(e.target.value);setLinkedin(e.target.value)}}/>
                             </div>
 
                             <div>
                                 <label htmlFor="github" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">GitHub Profile URL</label>
-                                <input type="url" id="github" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="https://github.com/johndoe" required />
+                                <input type="url" id="github" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="https://github.com/johndoe" required onChange={(e) => {console.log(e.target.value);setGithub(e.target.value)}}/>
                             </div>
 
                             <div>
                                 <label htmlFor="website" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blog/Website URL</label>
-                                <input type="url" id="website" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="https://johndoe.com" required />
+                                <input type="url" id="website" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="https://johndoe.com" required onChange={(e) => {console.log(e.target.value);setBlog(e.target.value)}}/>
                             </div>
 
                             <div>
@@ -143,13 +145,13 @@ const Forms = () => {
                                 <ul className="items-center w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                                     <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                                         <div className="flex items-center">
-                                            <input id="day1" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+                                            <input id="day1" type="checkbox" value="yes" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" onChange={(e) => {console.log(e.target.value);setWorkshop(e.target.value)}}/>
                                             <label htmlFor="day1" className="py-3 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Workshop - Day 1</label>
                                         </div>
                                     </li>
                                     <li className="w-full dark:border-gray-600">
                                         <div className="flex items-center pl-8">
-                                            <input id="day2" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
+                                            <input id="day2" type="checkbox" value="yes" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" onChange={(e) => {console.log(e.target.value);setConference(e.target.value)}}/>
                                             <label htmlFor="day2" className="py-3 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Conference - Day 2</label>
                                         </div>
                                     </li>
@@ -157,7 +159,7 @@ const Forms = () => {
                             </div>
                             <div>
                                 <label htmlFor="diet" className="block text-sm font-medium text-gray-900 dark:text-gray-400">Dietary restrictions</label>
-                                <select id="diet" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <select id="diet" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => {console.log(e.target.value);setDiet(e.target.value)}}>
                                     <option value="None">None</option>
                                     <option value="Vegetarian">Vegetarian</option>
                                     <option value="Non-vegetarian">Non-vegetarian</option>
@@ -168,18 +170,18 @@ const Forms = () => {
                             </div>
                             <div>
                                 <label htmlFor="tshirt" className="block text-sm font-medium text-gray-900 dark:text-gray-400">T-shirt size</label>
-                                <select id="tshirt" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                            <option value="2XL">2XL</option>
-                            <option value="3XL">3XL</option>
+                                <select id="tshirt" className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={(e) => {console.log(e.target.value);setTsize(e.target.value)}}>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="2XL">2XL</option>
+                                    <option value="3XL">3XL</option>
                                 </select>
                             </div>
                             <div className="flex">
                                 <div className="flex items-center h-5">
-                                    <input id="tnc_checkbox" aria-describedby="tnc_checkbox-text" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                    <input id="tnc_checkbox" aria-describedby="tnc_checkbox-text" type="checkbox" value="yes" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onChange={(e) => {console.log(e.target.value);setConfirm(e.target.value)}}/>
                                 </div>
                                 <div className="ml-2 text-sm">
                                     <label htmlFor="tnc_checkbox" className="font-medium text-gray-900 dark:text-gray-300">Agree to Terms and Conditions?</label>
@@ -188,14 +190,14 @@ const Forms = () => {
                             </div>
                             <div className="flex mt-2">
                                 <div className="flex items-center h-5">
-                                    <input id="application_checkbox" aria-describedby="application_checkbox-text" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                    <input id="application_checkbox" aria-describedby="application_checkbox-text" type="checkbox" value="yes" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" onChange={(e) => {console.log(e.target.value);setUnderstand(e.target.value)}}/>
                                 </div>
                                 <div className="ml-2 text-sm">
                                     <label htmlFor="application_checkbox" className="font-medium text-gray-900 dark:text-gray-300">Agree to ticketing terms?</label>
                                     <p id="application_checkbox-text" className="text-xs font-normal text-gray-500 dark:text-gray-300">Filling this form does not guarentee access to the event. The details of my submission will be reviewed in all fairness complying with the Code of Conduct of the event. On availability of seats I shall be sent a Ticket Claim email which I must claim within 72 hours from receiving the email, failing which my ticket will be transferred to those on the waitlist and I can no longer make any claim on it nor will show up to the event without a confirmation ticket.</p>
                                 </div>
                             </div>
-                            <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
+                            <button type="submit" onClick={RegistrationEvent} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
                         </form>
                     </div>
                 </section>
