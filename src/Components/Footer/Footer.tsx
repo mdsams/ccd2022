@@ -122,7 +122,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+              <h6 className="uppercase font-semibold mb-4 flex justify-center">
                 Events
               </h6>
               <p className="mb-4">
@@ -147,7 +147,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="">
-              <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+              <h6 className="uppercase font-semibold mb-4 flex justify-center">
                 Useful links
               </h6>
               <p className="mb-4">
@@ -251,7 +251,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center p-6 bg-gray-200">
-          <span>© 2022 Copyright:</span>
+          <span className="mr-2">© 2022 Copyright:</span>
           <a
             className="text-gray-600 font-semibold"
             href="https://tailwind-elements.com/"
