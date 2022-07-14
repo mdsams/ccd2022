@@ -12,10 +12,14 @@ const Footer = () => {
               />
 
               <p className="text-left">
-              The place for cloud developers and architects to come together to learn, discuss and explore the latest advances in cloud technologies.
+                The place for cloud developers and architects to come together to
+                learn, discuss and explore the latest advances in cloud technologies.
               </p>
               <div className="flex flex-row justify-center py-4 md:justify-start">
-                <a href="https://facebook.com/gdgcloudkol" className="mr-6 text-gray-600">
+                <a
+                  href="https://facebook.com/gdgcloudkol"
+                  className="mr-6 text-gray-600"
+                >
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -32,7 +36,10 @@ const Footer = () => {
                     ></path>
                   </svg>
                 </a>
-                <a href="https://twitter.com/gdgcloudkol" className="mr-6 text-gray-600">
+                <a
+                  href="https://twitter.com/gdgcloudkol"
+                  className="mr-6 text-gray-600"
+                >
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -49,7 +56,10 @@ const Footer = () => {
                     ></path>
                   </svg>
                 </a>
-                <a href="https://instagram.com/gdgcloudkol" className="mr-6 text-gray-600">
+                <a
+                  href="https://instagram.com/gdgcloudkol"
+                  className="mr-6 text-gray-600"
+                >
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -66,7 +76,10 @@ const Footer = () => {
                     ></path>
                   </svg>
                 </a>
-                <a href="https://www.linkedin.com/company/gdgcloudkol" className="mr-6 text-gray-600">
+                <a
+                  href="https://www.linkedin.com/company/gdgcloudkol"
+                  className="mr-6 text-gray-600"
+                >
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -103,41 +116,67 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-left">
-              <h6 className="uppercase font-semibold mb-4">
-                About
-              </h6>
+              <h6 className="uppercase font-semibold mb-4">About</h6>
               <p className="mb-4">
-                <a href="https://gdg.community.dev/gdg-cloud-kolkata/" className="text-gray-600">
+                <a
+                  href="https://gdg.community.dev/gdg-cloud-kolkata/"
+                  className="text-gray-600"
+                  target={'_blank'}
+                  rel="noreferrer"
+                >
                   GDG Cloud Kolkata
                 </a>
               </p>
               <p className="mb-4">
-                <a href="https://developers.google.com/community/gdg" className="text-gray-600">
+                <a
+                  href="https://developers.google.com/community/gdg"
+                  className="text-gray-600"
+                  target={'_blank'}
+                  rel="noreferrer"
+                >
                   Google Developer Groups
                 </a>
               </p>
               <p className="mb-4">
-                <a href="https://developers.google.com/womentechmakers" className="text-gray-600">
+                <a
+                  href="https://developers.google.com/womentechmakers"
+                  className="text-gray-600"
+                  target={'_blank'}
+                  rel="noreferrer"
+                >
                   Women Techmakers
                 </a>
               </p>
               <p>
-                <a href="https://developers.google.com/community/gdsc" className="text-gray-600">
+                <a
+                  href="https://developers.google.com/community/gdsc"
+                  className="text-gray-600"
+                  target={'_blank'}
+                  rel="noreferrer"
+                >
                   Google Developer Student Clubs
                 </a>
               </p>
             </div>
             <div className="text-left">
-              <h6 className="uppercase font-semibold mb-4">
-                Resources
-              </h6>
+              <h6 className="uppercase font-semibold mb-4">Resources</h6>
               <p className="mb-4">
-                <a href="#!" className="text-gray-600">
+                <a
+                  href="#!"
+                  className="text-gray-600"
+                  // target={'_blank'}
+                  // rel="noreferrer"
+                >
                   Terms and Conditions
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-gray-600">
+                <a
+                  href="https://t.me/gdgcloudkol"
+                  className="text-gray-600"
+                  target={'_blank'}
+                  rel="noreferrer"
+                >
                   Telegram Group
                 </a>
               </p>
@@ -168,7 +207,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex text-center justify-center items-center p-6 bg-gray-200">
-          <a className="block" href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></img></a>
+          <a className="block" href="https://opensource.org/licenses/MIT">
+            <img src="https://img.shields.io/badge/License-MIT-yellow.svg"></img>
+          </a>
           &nbsp; &middot; &nbsp;
           <a
             className="block text-gray-600 font-semibold"

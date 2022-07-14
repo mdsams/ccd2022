@@ -19,25 +19,25 @@ const FAQ = () => {
       <div className="w-full ">
         <Title heading="FAQ" />
         <div className="pb-1">
-            <div
-              onClick={() => setQuestion1(!question1)}
-              className="cursor-pointer flex justify-between rounded-xl  items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
+          <div
+            onClick={() => setQuestion1(!question1)}
+            className="cursor-pointer flex justify-between rounded-xl  items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 hover:bg-gray-100 "
+          >
+            <span>What is CCD 2022 Kolkata?</span>
+            <svg
+              data-accordion-icon
+              className="w-6 h-6 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span>What is CCD 2022 Kolkata?</span>
-              <svg
-                data-accordion-icon
-                className="w-6 h-6 shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </div>
+              <path
+                fillRule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </div>
           <div className={`${!question1 ? 'hidden' : ''}`}>
             <div className="p-3 border border-b-0 border-gray-200 ">
               <p className="mb-2 text-gray-500 ">
@@ -49,25 +49,25 @@ const FAQ = () => {
           </div>
         </div>
         <div className="pb-1">
-            <div
-              onClick={() => setQuestion2(!question2)}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
+          <div
+            onClick={() => setQuestion2(!question2)}
+            className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 hover:bg-gray-100 "
+          >
+            <span>Where can I find updates related to CCD 2022 Kolkata?</span>
+            <svg
+              data-accordion-icon
+              className="w-6 h-6 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span>Where can I find updates related to CCD 2022 Kolkata?</span>
-              <svg
-                data-accordion-icon
-                className="w-6 h-6 shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </div>
+              <path
+                fillRule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </div>
           <div className={`${!question2 ? 'hidden' : ''}`}>
             <div className="p-3 border border-b-0 border-gray-200 ">
               <p className="mb-2 text-gray-500 ">
@@ -97,25 +97,25 @@ const FAQ = () => {
           </div>
         </div>
         <div className="pb-1">
-            <div
-              onClick={() => setQuestion5(!question5)}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
+          <div
+            onClick={() => setQuestion5(!question5)}
+            className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 hover:bg-gray-100 "
+          >
+            <span>How can I attend CCD 2022 Kolkata? How much does it cost?</span>
+            <svg
+              data-accordion-icon
+              className="w-6 h-6 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span>How can I attend CCD 2022 Kolkata? How much does it cost?</span>
-              <svg
-                data-accordion-icon
-                className="w-6 h-6 shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </div>
+              <path
+                fillRule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </div>
           <div className={`${!question5 ? 'hidden' : ''}`}>
             <div className="p-3 border border-b-0 border-gray-200 ">
               <p className="mb-2 text-gray-500 ">
@@ -129,28 +129,27 @@ const FAQ = () => {
           </div>
         </div>
         <div className="pb-1">
-            <div
-              onClick={() => setQuestion3(!question3)}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
+          <div
+            onClick={() => setQuestion3(!question3)}
+            className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 hover:bg-gray-100 "
+          >
+            <span>
+              I want to present a talk/workshop at the conference. What should I do?
+            </span>
+            <svg
+              data-accordion-icon
+              className="w-6 h-6 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span>
-                I want to present a talk/workshop at the conference. What should I
-                do?
-              </span>
-              <svg
-                data-accordion-icon
-                className="w-6 h-6 shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </div>
+              <path
+                fillRule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </div>
           <div className={`${!question3 ? 'hidden' : ''}`}>
             <div className="p-3 border border-b-0 border-gray-200 ">
               <p className="mb-2 text-gray-500 ">
@@ -164,27 +163,27 @@ const FAQ = () => {
           </div>
         </div>
         <div className="pb-1">
-            <div
-              onClick={() => setQuestion4(!question4)}
-              className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 dark:border-gray-700  hover:bg-gray-100 dark:hover:bg-gray-800"
+          <div
+            onClick={() => setQuestion4(!question4)}
+            className="cursor-pointer flex justify-between rounded-xl items-center p-3 w-full font-medium text-left text-gray-500 border border-gray-300 focus:ring-4 hover:bg-gray-100 "
+          >
+            <span>
+              Will I be provided travel/stay accommodation to attend the event?
+            </span>
+            <svg
+              data-accordion-icon
+              className="w-6 h-6 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span>
-                Will I be provided travel/stay accommodation to attend the event?
-              </span>
-              <svg
-                data-accordion-icon
-                className="w-6 h-6 shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </div>
+              <path
+                fillRule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </div>
           <div className={`${!question4 ? 'hidden' : ''}`}>
             <div className="p-3 border border-b-0 border-gray-200 ">
               <p className="mb-2 text-gray-500 ">
