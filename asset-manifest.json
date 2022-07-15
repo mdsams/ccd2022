@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/ccd2022/static/css/main.ece181ec.css",
-    "main.js": "/ccd2022/static/js/main.d182806e.js",
+    "main.css": "/ccd2022/static/css/main.ae763ea7.css",
+    "main.js": "/ccd2022/static/js/main.3ab2cb8d.js",
     "static/media/gdsc-logo.gif": "/ccd2022/static/media/gdsc-logo.c4dc897894a7a1e2b603.gif",
+    "static/media/GoogleSans-Regular_0.ttf": "/ccd2022/static/media/GoogleSans-Regular_0.0d01ceaea2903216c4ee.ttf",
     "static/media/COC.gif": "/ccd2022/static/media/COC.3b49d8a315f66c89838b.gif",
+    "static/media/logo.svg": "/ccd2022/static/media/logo.51a2f67f6f6d78905cfd7449dd9f8c30.svg",
     "static/media/logo.png": "/ccd2022/static/media/logo.26ff8abf519779175358.png",
     "index.html": "/ccd2022/index.html",
-    "main.ece181ec.css.map": "/ccd2022/static/css/main.ece181ec.css.map",
-    "main.d182806e.js.map": "/ccd2022/static/js/main.d182806e.js.map"
+    "main.ae763ea7.css.map": "/ccd2022/static/css/main.ae763ea7.css.map",
+    "main.3ab2cb8d.js.map": "/ccd2022/static/js/main.3ab2cb8d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ece181ec.css",
-    "static/js/main.d182806e.js"
+    "static/css/main.ae763ea7.css",
+    "static/js/main.3ab2cb8d.js"
   ]
 }
