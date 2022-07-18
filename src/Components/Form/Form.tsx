@@ -6,7 +6,7 @@ import { getFirestore, setDoc, doc } from 'firebase/firestore'
 import app from '../../services/firebase'
 import { auth } from '../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { encode as base64_encode } from 'base-64'
+// import { encode as base64_encode } from 'base-64'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 const Forms = () => {

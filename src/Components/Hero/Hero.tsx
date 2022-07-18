@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom'
 import { db, auth, signInWithGoogle } from '../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { getDoc, doc } from 'firebase/firestore'
-import { encode as base64_encode } from 'base-64'
 
 const Hero = () => {
   const [user, loading]: any = useAuthState(auth)
@@ -59,12 +58,12 @@ const Hero = () => {
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4">
               {user ? (
                 applied ? (
-                  <button className="bg-yellow-500 text-white uppercase font-semibold py-4 px-8 rounded">
+                  <button className="bg-yellow-500 text-white uppercase font-semibold py-4 rounded">
                     Under Review
                   </button>
                 ) : (
                   <button
-                    className="bg-yellow-500 text-white uppercase font-semibold py-4 px-8 rounded"
+                    className="bg-yellow-500 text-white uppercase font-semibold py-4 rounded"
                     onClick={() => navigate('/ccd2022/rsvp')}
                   >
                     Apply for Ticket
@@ -72,7 +71,7 @@ const Hero = () => {
                 )
               ) : (
                 <button
-                  className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 text-white uppercase font-semibold py-4 px-8 rounded"
+                  className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 text-white uppercase font-semibold py-4 rounded"
                   onClick={signInWithGoogle}
                 >
                   Reserve Your Seat
@@ -85,7 +84,7 @@ const Hero = () => {
                 target={'_blank'}
                 rel="noreferrer"
               >
-                <button className="text-white uppercase font-semibold py-4 px-8 rounded">
+                <button className="text-white uppercase font-semibold py-4 rounded">
                   Become a Speaker
                 </button>
               </a>

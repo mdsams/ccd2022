@@ -7,14 +7,10 @@ import {
 } from "firebase/auth";
 import {
   getFirestore,
-  query,
   getDoc,
-  collection,
-  where,
   setDoc,
   doc
 } from "firebase/firestore";
-import {encode as base64_encode} from 'base-64';
 
 // Initialize Firebase
 const auth = getAuth(app);

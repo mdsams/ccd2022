@@ -1,14 +1,11 @@
-import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './Home/Home'
 // import Dashboard from './Dashboard/Dashboard'
 import Forms from '../Components/Form/Form'
-import { auth, db } from '../services/UserAuth'
+import { auth } from '../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import Dashboard from './Dashboard/Dashboard'
 import NotFound from './NotFound/NotFound'
-import { encode as base64_encode } from 'base-64'
-import { getDoc, doc } from 'firebase/firestore'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const [user] = useAuthState(auth)
