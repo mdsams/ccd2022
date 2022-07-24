@@ -33,17 +33,17 @@ export default function Navbar() {
           <div className="flex justify-between">
             <div className="flex space-x-7">
               <div>
-                <a href="#!" className="flex items-center pt-1 px-2">
+                <a href="#!" className="flex items-center px-2 my-1.5">
                   <img src={svglogo} alt="Logo" className="w-80 mr-2" />
                 </a>
               </div>
             </div>
 
-            <div className="hidden md:flex items-center space-x-3">
-              <div className="hidden md:flex items-center space-x-3">
+            <div className="hidden md:flex items-center space-x-9">
+              <div className="hidden md:flex items-center space-x-9">
                 <a
                   href="/ccd2022"
-                  className="py-4 px-2 text-googleBlue border-b-4 border-googleBlue font-semibold "
+                  className="py-3 px-2 text-googleBlue border-b-4 border-googleBlue font-semibold text-lg"
                   style={{ textDecoration: 'none' }}
                 >
                   Home
@@ -70,7 +70,7 @@ export default function Navbar() {
               {user ? (
                 <Link to="/ccd2022">
                   <button
-                    className="mt-2 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-black py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                    className="mt-1 py-1.5 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-black  px-4 border border-blue-500 hover:border-transparent rounded text-lg"
                     onClick={logout}
                   >
                     Log Out
