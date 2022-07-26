@@ -1,18 +1,27 @@
 {
   "files": {
-    "main.css": "/ccd2022/static/css/main.ae763ea7.css",
-    "main.js": "/ccd2022/static/js/main.3ab2cb8d.js",
+    "main.css": "/ccd2022/static/css/main.8b2d0c52.css",
+    "main.js": "/ccd2022/static/js/main.fa9a8483.js",
     "static/media/gdsc-logo.gif": "/ccd2022/static/media/gdsc-logo.c4dc897894a7a1e2b603.gif",
     "static/media/GoogleSans-Regular_0.ttf": "/ccd2022/static/media/GoogleSans-Regular_0.0d01ceaea2903216c4ee.ttf",
+    "static/media/gdsc-gecbsp-logo.png": "/ccd2022/static/media/gdsc-gecbsp-logo.3da3c8faebf753b77d50.png",
+    "static/media/gdsc-dscsit-logo.png": "/ccd2022/static/media/gdsc-dscsit-logo.e4af79eef3fb342747b2.png",
+    "static/media/gdsc-nsec-logo.png": "/ccd2022/static/media/gdsc-nsec-logo.12be21c4479978a55fee.png",
+    "static/media/gdsc-jisce-logo.png": "/ccd2022/static/media/gdsc-jisce-logo.bb4b7ccf1fecb1bc6bcc.png",
+    "static/media/gdsc-gce-logo.png": "/ccd2022/static/media/gdsc-gce-logo.b28a2f44d21deda2ec0e.png",
+    "static/media/gdsc-msit-logo.png": "/ccd2022/static/media/gdsc-msit-logo.01b028e60ff0b5c8e4da.png",
+    "static/media/gdsc-ciem-logo.png": "/ccd2022/static/media/gdsc-ciem-logo.5e171c3cd8b58f831cdf.png",
+    "static/media/gdsc-sit-logo.png": "/ccd2022/static/media/gdsc-sit-logo.60d69dbe06739663bc1d.png",
     "static/media/COC.gif": "/ccd2022/static/media/COC.3b49d8a315f66c89838b.gif",
     "static/media/logo.svg": "/ccd2022/static/media/logo.51a2f67f6f6d78905cfd7449dd9f8c30.svg",
+    "static/media/gdsc-hit-logo.png": "/ccd2022/static/media/gdsc-hit-logo.8d41e9cd9e95d58b6953.png",
     "static/media/logo.png": "/ccd2022/static/media/logo.26ff8abf519779175358.png",
     "index.html": "/ccd2022/index.html",
-    "main.ae763ea7.css.map": "/ccd2022/static/css/main.ae763ea7.css.map",
-    "main.3ab2cb8d.js.map": "/ccd2022/static/js/main.3ab2cb8d.js.map"
+    "main.8b2d0c52.css.map": "/ccd2022/static/css/main.8b2d0c52.css.map",
+    "main.fa9a8483.js.map": "/ccd2022/static/js/main.fa9a8483.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae763ea7.css",
-    "static/js/main.3ab2cb8d.js"
+    "static/css/main.8b2d0c52.css",
+    "static/js/main.fa9a8483.js"
   ]
 }
